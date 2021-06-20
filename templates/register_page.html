@@ -60,7 +60,7 @@
     <script>
         function on_click_register() {
             var xmlhttp = new XMLHttpRequest();
-            var theUrl = "http://127.0.0.1:5000/users/register";
+            var theUrl = "./users/register";
             xmlhttp.open("POST", theUrl);
             xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xmlhttp.send(JSON.stringify({
@@ -71,7 +71,7 @@
             xmlhttp.onreadystatechange = function() {
 
                 if (this.readyState == 4 && this.status == 200) {
-                    window.location.href = "http://127.0.0.1:5000/dashboard";
+                    window.location.href = "./dashboard";
                 }
                 if (this.readyState == 4 && this.status == 404) {
                     console.log(document.getElementById("invalid").innerHTML)

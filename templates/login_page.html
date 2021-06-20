@@ -60,7 +60,7 @@
     <script>
         function on_click_login() {
             var xmlhttp = new XMLHttpRequest();
-            var theUrl = "http://127.0.0.1:5000/users/login";
+            var theUrl = "./users/login";
             xmlhttp.open("POST", theUrl);
             xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xmlhttp.send(JSON.stringify({
@@ -73,7 +73,7 @@
                     response = JSON.parse(this.responseText)
                     localStorage.setItem("userId", response[0]._id);
 
-                    window.location.href = "http://127.0.0.1:5000/dashboard";
+                    window.location.href = ".//dashboard";
                 }
                 if (this.readyState == 4 && this.status == 404) {
                     console.log(document.getElementById("invalid").innerHTML)

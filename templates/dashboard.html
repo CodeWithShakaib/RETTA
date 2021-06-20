@@ -140,7 +140,7 @@
 
     function storeHistory() {
         var xmlhttp = new XMLHttpRequest(); // new HttpRequest instance
-        var theUrl = "http://127.0.0.1:5000/users/history/" + localStorage.getItem("userId");
+        var theUrl = "./users/history/" + localStorage.getItem("userId");
         xmlhttp.open("POST", theUrl);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.send(JSON.stringify({
@@ -187,7 +187,7 @@
 
             }
         };
-        xhttp.open("GET", "http://127.0.0.1:5000/getTwitterTrends", true);
+        xhttp.open("GET", "./getTwitterTrends", true);
         xhttp.send();
     }
 
@@ -208,7 +208,7 @@
                     </div>`;
 
         var xmlhttp = new XMLHttpRequest(); // new HttpRequest instance
-        var theUrl = "http://127.0.0.1:5000/scrapeTweets";
+        var theUrl = "./scrapeTweets";
         xmlhttp.open("POST", theUrl);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.send(JSON.stringify({

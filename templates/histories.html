@@ -50,7 +50,7 @@
 
             }
         };
-        xhttp.open("GET", `http://127.0.0.1:5000/users/${localStorage.getItem("userId")}`, true);
+        xhttp.open("GET", `./users/${localStorage.getItem("userId")}`, true);
         xhttp.send();
         console.log(localStorage.getItem("userId"));
     </script>

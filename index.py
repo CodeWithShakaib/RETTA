@@ -275,7 +275,6 @@ def getTwitterTrends():
         print(err)
         return "error"
 
-
 @app.route('/scrapeTweets', methods=['GET', 'POST'])
 def scrapeTweets():
     try:
