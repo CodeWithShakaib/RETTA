@@ -40,7 +40,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('headless')
 options.add_argument('window-size=1920x1080')
 options.add_argument("disable-gpu")
-driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver", options=options)
+#driver = webdriver.Chrome("./chromedriver", options=options)
 
 users = db.mydb["users"]
 tweets_mongo = db.mydb["tweets"]
@@ -422,4 +422,4 @@ def dashboard():
 
 
 if __name__ == '__main__':
-   app.run(debug = True)
+   app.run(host='0.0.0.0', port=5000)
