@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/img/logo_s.png">
+
+    <title>RETTA</title>
+    <style>
+        body {
+            font-family: courier, arial, helvetica;
+            margin: 0;
+        }
+        
+        .container {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .img-container {
+            position: relative;
+            text-align: left;
+            color: white;
+        }
+        
+        .left {
+            position: absolute;
+            top: 26%;
+            left: 10%;
+        }
+        
+        .nav-text {
+            color: white;
+            font-size: 18px;
+        }
+        
+        .transp {
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+            color: white;
+            border-color: white;
+            padding: 8px;
+            font-size: 20px;
+            font-family: courier, arial, helvetica;
+        }
+        
+        footer {
+            background-color: black;
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding-left: 90px;
+            padding-right: 90px;
+            padding-top: 40px;
+            padding-bottom: 30px;
+        }
+        
+        .color-white {
+            color: white;
+        }
+        
+        .content {
+            display: flex;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .index {
+            padding-left: 80px;
+            font-size: 18px;
+            padding-right: 60px;
+            text-align: center;
+        }
+        
+        .p {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        
+        .index-content {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        
+        .content-card {
+            text-align: left;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-bottom: 50px;
+        }
+        
+        .link:hover {
+            color: #2294C6;
+        }
+        
+        .active:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div style="background-color:black; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; color: #B4161B;">
+            <marquee direction="right">Made in Military College of Signals, NUST with love.</marquee>
+        </div>
+
+        <nav style="background-color:#242B2E; padding-top: 10px; padding-bottom: 10px; padding-left: 150px;">
+            <img src="../static/img/logo.png" width="5%" style="padding-right: 40px;" alt="" srcset="">
+            <a class="nav-text active" href="/" style="background-color: #2294C6; padding: 20px; text-decoration: none;">Home</a>&nbsp;&nbsp;
+
+            <a class="nav-text link" href="/login_page">Login</a>&nbsp;&nbsp;
+            <a class="nav-text link" href="/register_page">Signup</a>&nbsp;&nbsp;
+        </nav>
+
+
+
+        <div class="img-container">
+            <img src="../static/img/home-1.png" alt="Snow" style="width:100%;">
+
+            <div class="left" style="background-color: rgba(0, 0, 0, .7); padding: 2%; border-radius: 20px;">
+                <img src="../static/img/logo.png" width="195px" alt="" srcset="">
+                <p style="font-size: 30px;">RETTA is a real time top<br>trending sentiment analyzer<br> of tweets, which will<br>be scrapped at run time.
+                </p>
+                <a href="/register_page"><button class='transp'>Start sentiment analysis</button></a>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="p index">
+        <h1>WHY ARE WE DIFFERENT?</h1>
+        <br><br>
+
+        <div>
+            <div class="content">
+                <div class="content-card">
+                    <b>Scratch real time trends</b>
+                    <p>In RETTA, top 20 trends will be fetched with respect to region RETTA is used in.</p>
+                </div>
+                <div class="content-card">
+                    <b>Store Histories</b>
+                    <p>In RETTA, user can store histories with respect to date and time. So that user can access histories.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="content-card">
+                    <b>AI based sentiment analysis</b>
+                    <p>RETTA is using data science and data analysis tecniques to do sentiment analysis.</p>
+                </div>
+                <div class="content-card">
+                    <b>NoSQL database and data viusalization</b>
+                    <p>RETTA is using NoSQL database such as mongodb. And display analysis results in the from of a piechart.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <footer>
+        <div class="content ">
+            <div style="padding-right: 80px; ">
+                <a href="/">
+                    <img src="../static/img/logo.png" width="150px" alt="" srcset="">
+                </a>
+                <p class="color-white ">RETTA is a well documented and sentiment analyzer <br> and having room for improvements, it will analyze real <br> time tweets and viusalize results.</p>
+                <br>
+            </div>
+            <div style="padding-right: 80px; ">
+                <ul class="color-white ">
+                    <li>
+                        <a class="nav-text " href="/">Home</a>
+                    </li><br>
+                    <li>
+                        <a class="nav-text " href="/login_page">Login</a>
+                    </li><br>
+                    <li>
+                        <a class="nav-text " href="/register_page">Register</a>
+                    </li><br>
+                </ul>
+
+                <br>
+            </div>
+            <div>
+                <ul class="color-white ">
+
+                    <li>
+                        <a href="https://mcs.nust.edu.pk/" class="nav-text ">Military College of Signals, NUST</a>
+                    </li><br>
+                </ul>
+
+
+                <br>
+            </div>
+        </div>
+
+        <hr class="color-white ">
+        <div class="content ">
+            <p class="color-white " style="padding-right: 500px; ">Copyright © 2020 RETTA. All Rights Reserved.</p>
+
+            <p style="padding-right: 80px; "><a class="color-white " href="mailto:softech@gmail.com ">retta@gmail.com</a></p>
+            <p class="color-white ">+92 335 6311010</p>
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>

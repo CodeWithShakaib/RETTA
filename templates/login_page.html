@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>RETTA | Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../static/img/logo_s.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .nav-text {
+            color: white;
+            font-size: 18px;
+        }
+        
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .input-style {
+            padding: 9px;
+            padding-bottom: 0;
+            width: 100%;
+            border-radius: 12px;
+            padding-bottom: 9px;
+        }
+        
+        input:focus {
+            outline: none;
+            /* border-radius: 0; */
+            /* box-shadow: none; */
+            box-shadow: 0 0 1px 1px #2294C6;
+        }
+        
+        button:focus {
+            outline: none;
+            /* border-radius: 0; */
+            box-shadow: none;
+            /* box-shadow: 0 0 1px 1px #2294C6; */
+        }
+        
+        .link:hover {
+            color: #2294C6;
+        }
+        
+        .active:hover {
+            color: white;
+        }
+    </style>
+
+    <script>
+        function on_click_login() {
+            var xmlhttp = new XMLHttpRequest();
+            var theUrl = "http://127.0.0.1:5000/users/login";
+            xmlhttp.open("POST", theUrl);
+            xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xmlhttp.send(JSON.stringify({
+                "email": document.getElementById('name').value,
+                "password": document.getElementById('password').value
+            }));
+            xmlhttp.onreadystatechange = function() {
+
+                if (this.readyState == 4 && this.status == 200) {
+                    response = JSON.parse(this.responseText)
+                    localStorage.setItem("userId", response[0]._id);
+
+                    window.location.href = "http://127.0.0.1:5000/dashboard";
+                }
+                if (this.readyState == 4 && this.status == 404) {
+                    console.log(document.getElementById("invalid").innerHTML)
+                    document.getElementById("invalid").innerHTML = `<p class="mt-2"  style="color: red;">Invalid email or password</p>`
+
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav style="background-color:#242B2E; padding-top: 10px; padding-bottom: 10px; padding-left: 150px; font-family: courier, arial, helvetica;">
+            <img src="../static/img/logo.png" width="7%" style="padding-right: 40px;" alt="" srcset="">
+            <a class="nav-text link" style="text-decoration: none;" href="/">Home</a>&nbsp;&nbsp;
+            <a class="nav-text active" href="/login_page" style="background-color: #2294C6; padding: 14px; text-decoration: none;">Login</a>&nbsp;&nbsp;
+            <a class="nav-text link" href="/register_page" style="text-decoration: none;">Signup</a>&nbsp;&nbsp;
+        </nav>
+    </header>
+
+    <div class="" style="position: relative;">
+        <br><br><br><br><br><br>
+        <form class="w-25" style="position: absolute; left: 37%;">
+            <div class="">
+                <div class="text-center">
+                    <img src="../static/img/logo.png" width="40%" alt="" srcset="">
+                    <h3 class="mt-4">Welcome</h3>Don't have an account?
+                    <a href="/register_page" style="color: #2294C6; text-decoration: none;">Sign up.</a>
+                </div>
+                <input type="email" class="border border-dark input-style mt-4" id="name" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted mt-2">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="">
+                <input type="password" class="border border-dark input-style mt-2" id="password" placeholder="Password">
+            </div>
+            <div id="invalid"></div>
+            <div class="text-center">
+                <button type="button" class="btn shadow-none btn-primary mt-4 mb-3" style="background-color: #242B2E; width: 150px;" id="login" onclick="on_click_login()">Login</button><br>
+            </div>
+
+
+        </form>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
