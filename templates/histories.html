@@ -50,7 +50,7 @@
 
             }
         };
-        xhttp.open("GET", `./users/${localStorage.getItem("userId")}`, true);
+        xhttp.open("GET", `./${localStorage.getItem("userId")}`, true);
         xhttp.send();
         console.log(localStorage.getItem("userId"));
     </script>
