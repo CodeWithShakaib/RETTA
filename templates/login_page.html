@@ -73,7 +73,7 @@
                     response = JSON.parse(this.responseText)
                     localStorage.setItem("userId", response[0]._id);
 
-                    window.location.href = ".//dashboard";
+                    window.location.href = "./dashboard";
                 }
                 if (this.readyState == 4 && this.status == 404) {
                     console.log(document.getElementById("invalid").innerHTML)
@@ -88,31 +88,30 @@
 <body>
     <header>
         <nav style="background-color:#242B2E; padding-top: 10px; padding-bottom: 10px; padding-left: 150px; font-family: courier, arial, helvetica;">
-            <img src="../static/img/logo.png" width="7%" style="padding-right: 40px;" alt="" srcset="">
             <a class="nav-text link" style="text-decoration: none;" href="/">Home</a>&nbsp;&nbsp;
-            <a class="nav-text active" href="/login_page" style="background-color: #2294C6; padding: 14px; text-decoration: none;">Login</a>&nbsp;&nbsp;
-            <a class="nav-text link" href="/register_page" style="text-decoration: none;">Signup</a>&nbsp;&nbsp;
+            <a class="nav-text active" href="/login_page" style="background-color: #2294C6; padding: 14px; text-decoration: none;">LogIn</a>&nbsp;&nbsp;
+            <a class="nav-text link" href="/register_page" style="text-decoration: none;">SignUp</a>&nbsp;&nbsp;
         </nav>
     </header>
 
     <div class="" style="position: relative;">
         <br><br><br><br><br><br>
-        <form class="w-25" style="position: absolute; left: 37%;">
+        <form class="w-25" style="position: absolute; left: 40%;">
             <div class="">
                 <div class="text-center">
-                    <img src="../static/img/logo.png" width="40%" alt="" srcset="">
-                    <h3 class="mt-4">Welcome</h3>Don't have an account?
-                    <a href="/register_page" style="color: #2294C6; text-decoration: none;">Sign up.</a>
+                    <img src="../static/img/logo.png" width="60%" alt="" srcset="">
+                    <h3 class="mt-4">Welcome!</h3>Don't have an Account?
+                    <a href="/register_page" style="color: #2294C6; text-decoration: none;">SignUp.</a>
                 </div>
                 <input type="email" class="border border-dark input-style mt-4" id="name" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted mt-2">We'll never share your email with anyone else.</small>
+                <small id="emailHelp" class="form-text text-muted mt-2">We'll never share your E-mail with anyone else.</small>
             </div>
             <div class="">
                 <input type="password" class="border border-dark input-style mt-2" id="password" placeholder="Password">
             </div>
             <div id="invalid"></div>
             <div class="text-center">
-                <button type="button" class="btn shadow-none btn-primary mt-4 mb-3" style="background-color: #242B2E; width: 150px;" id="login" onclick="on_click_login()">Login</button><br>
+                <button type="button" class="btn shadow-none btn-primary mt-4 mb-3" style="background-color: #242B2E; width: 150px;" id="login" onclick="on_click_login()">LogIn</button><br>
             </div>
 
 

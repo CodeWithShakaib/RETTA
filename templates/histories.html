@@ -21,14 +21,14 @@
                 // Typical action to be performed when the document is ready:
                 let response = JSON.parse(this.responseText);
                 let report = response[0].history;
-                let history_table = `<h2 class='m-3' style="width:100%;">Histories</h2>
+                let history_table = `<h2 class='m-3' style="width:100%;">History</h2>
                                             <table class="table table-striped">
                                             <thead class="thead-dark">
                                                 <tr>
                                                 <th scope="col">Date</th>
                                                 <th scope="col">Trend</th>
                                                 <th scope="col">Positive (%)</th>
-                                                <th scope="col">Negitive (%)</th>
+                                                <th scope="col">Negative (%)</th>
                                                 <th scope="col">Neutral (%)</th>
                                                 </tr>
                                             </thead>
@@ -74,12 +74,12 @@
 <body>
     <header>
         <nav style="background-color:#242B2E; padding-top: 10px; padding-bottom: 10px; padding-left: 150px; font-family: courier, arial, helvetica;">
-            <img src="../static/img/logo.png" width="5%" class="mr-5" alt="" srcset="">
+            <img src="../static/img/logo.png" width="8%" class="mr-5" alt="" srcset="">
             <a class="nav-text link" href="/dashboard" style="text-decoration: none;">Dashboard</a>&nbsp;&nbsp;
             <a class="nav-text link active" href="/users/histories" style="background-color: #2294C6; text-decoration: none; padding: 14px;">History</a>&nbsp;&nbsp;
             <span style="text-align: right;">
                 <img src="../static/img/logout.png" width="1%" alt="" srcset="">
-                <a class="nav-text link" href="/login_page" style="text-decoration: none;">Logout</a>&nbsp;&nbsp;</div>
+                <a class="nav-text link" href="/login_page" style="text-decoration: none;">LogOut</a>&nbsp;&nbsp;</div>
             </span>
 
         </nav>
